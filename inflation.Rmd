@@ -1,6 +1,6 @@
 ---
-title: "Inflation Data"
-author: "Aaron Peikert"
+title: " Data"
+author: "Test Test "
 date: "`r Sys.Date()`"
 output: pdf_document
 repro:
@@ -40,7 +40,7 @@ I quote:
 For this dataset the Bank of England asked `r prettyNum(nrow(inflation), big.mark = ".", decimal.mark = ",")` people for their opinion on the perceived and expected inflation.
 The survey has run quarterly since `r min(inflation$year)`.
 
-```{r}
+```{r, warning=F}
 inflation %>% 
   group_by(date) %>% 
   summarise(across(c(perception, expectation),
